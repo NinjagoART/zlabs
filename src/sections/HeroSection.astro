@@ -1,0 +1,103 @@
+---
+import Cube from "@Components/Cube3D.astro";
+---
+
+<!-- <div class="relative overflow-hidden bg-gradient-to-br from-[#1e8989] to-[#b43507] min-h-[80vh] flex items-center"></div> -->
+<section
+  id="herosection"
+  class="relative flex min-h-[80vh] w-full bg-white font-neue"
+>
+  <!-- Sección izquierda: Texto -->
+  <div class="w-1/2 flex flex-col items-center justify-center ml-20">
+    <div class="flex flex-col items-stretch">
+      <div class="text-8xl font-Jockey font-bold">
+        <span class="letter-z">Z</span><span class="word-labs">-labs</span>
+      </div>
+      <p class="text-gray-600 max-w-prose mt-8 text-xl text-justify">
+        Diseñamos y fabricamos soluciones 3D a medida: <br />
+        prototipos, visualizaciones y piezas finales.
+      </p>
+      <div>
+        <a href="#">
+          <button
+            class="mt-8 px-6 py-3 bg-naranja-600 text-white rounded-lg hover:bg-naranja-700 transition"
+          >
+            Contáctanos
+          </button>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sección derecha: Cubo 3D -->
+  <div class="w-1/2 flex items-center justify-center">
+    <div class="h-96 w-full flex items-center justify-center">
+      <div style="filter: drop-shadow(0 0 32px #258AE4aa);">
+        <Cube />
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  import { createTimeline, stagger, utils, splitText } from "animejs";
+
+  // Separamos la animación en dos partes
+  const timeline = createTimeline({
+    defaults: { ease: "inOut(3)", duration: 400 },
+  });
+
+  // Primero animamos la "Z"
+  const zElement = document.querySelector(".letter-z");
+  const { chars: zChars } = splitText(zElement, { chars: true });
+
+  // Luego animamos "-labs"
+  const labsElement = document.querySelector(".word-labs");
+  const { words: labsWords, chars: labsChars } = splitText(labsElement, {
+    words: { wrap: "clip" },
+    chars: true,
+  });
+
+  // Configuración de la animación secuencial
+  timeline
+    // Animación inicial de la Z con delay
+    .add(
+      zChars,
+      {
+        y: ["-100%", "0%"],
+        opacity: [0, 1],
+      },
+      stagger(100, { start: 200 }),
+    ) // Delay inicial de 500ms
+
+    // Animación de "-labs" después de la Z
+    .add(
+      labsWords,
+      {
+        y: ["100%", "0%"],
+        opacity: [0, 1],
+      },
+      stagger(200, { start: 700 }),
+    ) // Empieza después de la Z
+
+    // Animación de caracteres individuales de "-labs"
+    .add(
+      labsChars,
+      {
+        y: ["50%", "0%"],
+        opacity: [0, 1],
+      },
+      stagger(50, { start: 800 }),
+    )
+
+    // Loop completo
+    .add({
+      targets: [zChars, labsChars],
+      y: "0%",
+      opacity: 1,
+      duration: 400,
+      delay: stagger(100),
+    });
+
+  timeline.init();
+</script>

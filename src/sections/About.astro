@@ -1,0 +1,199 @@
+---
+import SectionContainer from "@Components/SectionContainer.astro";
+
+// Equipo (según documentos)
+const team = [
+  {
+    name: "Roberto Daniel Ramírez Díaz de León",
+    role: "Director de Finanzas",
+    img: "https://upload.wikimedia.org/wikipedia/commons/a/a2/Person_Image_Placeholder.png",
+    desc: `
+    Responsable de la estabilidad económica de Z-LABS. Supervisa presupuestos, controla costos, 
+    evalúa inversiones y coordina compras estratégicas. Su participación matricial incluye 
+    proyectos de inversión, expansión estatal y análisis financiero para nuevos servicios.`
+  },
+  {
+    name: "Shaina Alexandra Xochitiotzi Rojas",
+    role: "Directora de Marketing y Recursos Humanos",
+    img: "https://upload.wikimedia.org/wikipedia/commons/a/a2/Person_Image_Placeholder.png",
+    desc: `
+    Encargada de posicionamiento digital, campañas publicitarias y reclutamiento. Lidera la cultura 
+    organizacional, la comunicación interna y las campañas estatales y municipales. Su enfoque 
+    estratégico impulsa el reconocimiento de marca y el bienestar del equipo.`
+  },
+  {
+    name: "Marco Antonio Rivera Paniagua",
+    role: "Director de Diseño 3D",
+    img: "https://upload.wikimedia.org/wikipedia/commons/a/a2/Person_Image_Placeholder.png",
+    desc: `
+    Especialista en modelado y optimización de piezas. Dirige el desarrollo de prototipos, la 
+    revisión técnica y la preparación de archivos. Colabora con Innovación para garantizar la 
+    compatibilidad de diseños con materiales, producción y estándares de calidad.`
+  },
+  {
+    name: "Rubén Palacios Ríos",
+    role: "Director de Innovación, Operaciones y Calidad",
+    img: "https://upload.wikimedia.org/wikipedia/commons/a/a2/Person_Image_Placeholder.png",
+    desc: `
+    Líder de procesos productivos, mantenimiento de impresoras y control de calidad. Supervisa el 
+    reciclaje Eco-Z, la mejora continua y la relación con proveedores técnicos. Administra el taller 
+    municipal y coordina equipos multidisciplinarios para optimizar el flujo operativo.`
+  },
+  {
+    name: "Juan Arturo García Calderón",
+    role: "Director de Soporte Técnico y Sistemas",
+    img: "https://upload.wikimedia.org/wikipedia/commons/a/a2/Person_Image_Placeholder.png",
+    desc: `
+    Responsable de infraestructura digital, servidores, seguridad informática y mantenimiento del 
+    CRM y plataformas web. Su participación incluye soporte al taller, integraciones técnicas y 
+    continuidad operativa de los sistemas tecnológicos de Z-LABS.`
+  }
+];
+---
+
+<!-- HERO -->
+<SectionContainer class="bg-white py-24 sm:py-32">
+  <div class="mx-auto max-w-4xl text-center">
+    <h1 class="text-5xl sm:text-6xl font-Jockey font-bold text-gray-900">
+      Acerca de Nosotros
+    </h1>
+    <p class="mt-14 text-lg text-gray-700 leading-relaxed text-justify">
+      En <span class="text-orange-500 font-semibold">Z-LABS</span> transformamos ideas en objetos reales mediante
+      tecnología de impresión 3D, innovación y un modelo sostenible que democratiza el acceso al prototipado y la fabricación personalizada.
+    </p>
+  </div>
+</SectionContainer>
+
+<!-- QUIÉNES SOMOS -->
+<SectionContainer class="bg-azul-500/10 py-20">
+  <div class="mx-auto max-w-5xl text-center">
+    <h2 class="text-4xl font-bold text-gray-900">¿Quiénes somos?</h2>
+    <p class="mt-6 text-lg text-gray-700 leading-relaxed text-justify">
+      Z-LABS S. de R.L. de C.V. somos una empresa especializada en diseño y fabricación de piezas 
+      personalizadas mediante impresión 3D. Atendemos a estudiantes, emprendedores, profesionales 
+      e instituciones que necesitan prototipos, modelos funcionales o productos creativos adaptados 
+      a sus necesidades. Nos distinguimos por nuestra innovación, calidad, atención cercana y valores 
+      sólidos que guían cada proyecto.
+    </p>
+  </div>
+</SectionContainer>
+
+<!-- MISIÓN, VISIÓN, VALORES -->
+<SectionContainer class="bg-white py-20">
+  <div class="mx-auto max-w-6xl grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
+
+    <div class="p-8 rounded-3xl bg-gray-50 shadow border border-gray-200 hover:shadow-xl transition">
+      <h3 class="text-2xl font-bold text-gray-900">Misión</h3>
+      <p class="mt-4 text-gray-700 text-justify">
+        Proveer soluciones de fabricación digital innovadoras, sostenibles y accesibles,
+        acompañando a cada cliente desde la idea hasta la entrega final.
+      </p>
+    </div>
+
+    <div class="p-8 rounded-3xl bg-gray-50 shadow border border-gray-200 hover:shadow-xl transition">
+      <h3 class="text-2xl font-bold text-gray-900">Visión</h3>
+      <p class="mt-4 text-gray-700 text-justify">
+        Ser un motor de cambio tecnológico, impulsando creatividad, competitividad e innovación
+        en Querétaro y más allá.
+      </p>
+    </div>
+
+    <div class="p-8 rounded-3xl bg-gray-50 shadow border border-gray-200 hover:shadow-xl transition">
+      <h3 class="text-2xl font-bold text-gray-900">Valores</h3>
+      <ul class="mt-4 space-y-2 text-gray-700">
+        <li>• Innovación</li>
+        <li>• Calidad</li>
+        <li>• Colaboración</li>
+        <li>• Pasión</li>
+        <li>• Originalidad</li>
+        <li>• Flexibilidad</li>
+      </ul>
+    </div>
+
+  </div>
+</SectionContainer>
+
+<!-- HISTORIA -->
+<SectionContainer class="bg-azul-500/20 py-20">
+  <div class="mx-auto max-w-6xl grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+
+    <img
+      src="/3d.png"
+      alt="Impresión 3D"
+      class="rounded-3xl shadow-xl object-cover"
+    />
+
+    <div>
+      <h3 class="text-3xl font-bold text-gray-900">Nuestra Historia</h3>
+      <p class="mt-4 text-gray-700 leading-relaxed text-justify">
+        Z-LABS nace para democratizar la impresión 3D, ofreciendo servicios accesibles y de calidad.
+        Aprovechamos el ecosistema emprendedor de Querétaro y su cercanía con universidades para
+        impulsar el desarrollo académico y profesional mediante tecnología y creatividad.
+      </p>
+      <p class="mt-4 text-gray-700 leading-relaxed text-justify">
+        Nuestro equipo joven, flexible y multidisciplinario impulsa una cultura organizacional
+        basada en experimentación, aprendizaje continuo y mejora constante.
+      </p>
+    </div>
+
+  </div>
+</SectionContainer>
+
+<!-- LO QUE NOS DISTINGUE -->
+<SectionContainer class="bg-white py-20">
+  <div class="mx-auto max-w-4xl text-center mb-12">
+    <h3 class="text-4xl font-bold text-gray-900">¿Por qué elegirnos?</h3>
+  </div>
+
+  <div class="mx-auto max-w-6xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+    <div class="p-6 bg-gray-50 rounded-2xl shadow border border-gray-200 text-center">
+      <h4 class="font-bold text-gray-900 text-lg">Tecnología Avanzada</h4>
+      <p class="mt-2 text-sm text-gray-700">Equipos FDM y SLA de alta precisión.</p>
+    </div>
+
+    <div class="p-6 bg-gray-50 rounded-2xl shadow border border-gray-200 text-center">
+      <h4 class="font-bold text-gray-900 text-lg">Sustentabilidad</h4>
+      <p class="mt-2 text-sm text-gray-700">Programa Eco-Z para reciclaje de filamento.</p>
+    </div>
+
+    <div class="p-6 bg-gray-50 rounded-2xl shadow border border-gray-200 text-center">
+      <h4 class="font-bold text-gray-900 text-lg">Atención Personalizada</h4>
+      <p class="mt-2 text-sm text-gray-700">Respuesta en menos de 24 horas.</p>
+    </div>
+
+    <div class="p-6 bg-gray-50 rounded-2xl shadow border border-gray-200 text-center">
+      <h4 class="font-bold text-gray-900 text-lg">Calidad Garantizada</h4>
+      <p class="mt-2 text-sm text-gray-700">Procesos ágiles con revisiones constantes.</p>
+    </div>
+
+  </div>
+</SectionContainer>
+
+<!-- EQUIPO -->
+<SectionContainer class="bg-azul-500/10 py-24">
+  <div class="mx-auto max-w-4xl text-center mb-12">
+    <h3 class="text-4xl font-bold text-gray-900">Nuestro Equipo</h3>
+    <p class="mt-4 text-gray-700 text-justify">
+      Los directivos que dan vida a Z-LABS
+    </p>
+  </div>
+
+  <div class="mx-auto max-w-6xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
+
+    {team.map(member => (
+      <div class="bg-white rounded-3xl shadow border border-gray-200 p-6 text-center hover:shadow-xl transition">
+        <img
+          src={member.img}
+          alt={member.name}
+          class="w-40 h-40 rounded-full object-cover mx-auto mb-6 bg-gray-200"
+        />
+        <h4 class="text-xl font-bold text-gray-900">{member.name}</h4>
+        <p class="text-orange-500 font-semibold mt-1">{member.role}</p>
+        <p class="mt-4 text-sm text-gray-700 leading-relaxed text-justify">{member.desc}</p>
+      </div>
+    ))}
+
+  </div>
+</SectionContainer>
+

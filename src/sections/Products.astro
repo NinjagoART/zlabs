@@ -1,0 +1,73 @@
+---
+import SectionContainer from "@Components/SectionContainer.astro";
+
+const products = [
+  {
+    name: "Eco-Z",
+    subtitle: "Filamento 100% Reciclado",
+    image: "/products/eco-z-placeholder.webp",
+  },
+  {
+    name: "Z-Flex",
+    subtitle: "TPU Flexible de Alta Durabilidad",
+    image: "/products/z-flex-placeholder.webp",
+  },
+  {
+    name: "Z-PRO",
+    subtitle: "Kit Profesional de Acabados",
+    image: "/products/z-pro-placeholder.webp",
+  },
+  {
+    name: "Z-DRY",
+    subtitle: "Caja Secadora de Filamento",
+    image: "/products/z-dry-placeholder.webp",
+  },
+  {
+    name: "Z-GRIP",
+    subtitle: "Adhesivo para Cama Caliente",
+    image: "/products/z-grip-placeholder.webp",
+  },
+  {
+    name: "Z-CARE",
+    subtitle: "Kit de Mantenimiento",
+    image: "/products/z-care-placeholder.webp",
+  },
+];
+---
+
+<section class="bg-azul-500/20 px-6 py-24 sm:py-32 lg:px-8" id="products">
+  <div class="mx-auto max-w-4xl text-center mb-12">
+    <h2 class="mt-2 text-5xl font-semibold tracking-tight sm:text-6xl font-Jockey text-gray-900">Nuestros Productos</h2>
+    <p class="mt-3 text-lg text-gray-700">
+      Explora nuestra línea de filamentos, accesorios y kits diseñados para makers y profesionales.
+    </p>
+  </div>
+
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-8">
+      {products.map((product) => (
+        <div
+          class="group relative w-full rounded-lg shadow-lg bg-white overflow-hidden
+            perspective-[1000px] hover:rotate-y-0 hover:scale-105 transition-transform duration-300
+            hover:shadow-2xl"
+          style="transform-style: preserve-3d;"
+        >
+          <div class="transform group-hover:rotate-y-0 rotate-y-0 transition-transform duration-300">
+            <img
+              src={product.image}
+              alt={product.name}
+              class="aspect-square w-full object-cover bg-gray-200"
+            />
+            <div class="p-4">
+              <h3 class="text-lg font-semibold text-gray-900">{product.name}</h3>
+              <p class="mt-1 text-sm text-gray-600">{product.subtitle}</p>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+      <p class="text-sm text-gray-500 mt-10"> *Los productos pueden varias, imagenes con fines ilustrativos </p>
+  </div>
+
+
+</section>

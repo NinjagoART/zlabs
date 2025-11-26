@@ -1,0 +1,226 @@
+---
+import Layout from "@Layouts/Layout.astro";
+import SectionContainer from "@Components/SectionContainer.astro";
+
+// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
+// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+---
+
+<Layout title="Condiciones de Adheción | Z-labs">
+
+<SectionContainer class="isolate bg-white px-6 py-24 sm:py-32 lg:px-8 overflow-hidden">
+
+  <!-- Fondo degradado legal/azulado -->
+  <div aria-hidden="true" class="absolute min-h-full inset-0 -z-10 opacity-20">
+    <div class="absolute inset-0 bg-gradient-to-br from-azul-400 to-orange-400 blur-3xl"></div>
+  </div>
+
+  <!-- Título -->
+  <div class="mx-auto max-w-3xl text-center mb-16">
+    <h1 class="text-4xl sm:text-5xl font-Jockey font-bold text-gray-900">
+      Contrato de Adhesión
+    </h1>
+    <p class="mt-4 text-lg text-gray-700">
+      Para la prestación de servicios y venta de productos ofrecidos por <span class="font-semibold text-orange-500">Z-LABS</span>.
+    </p>
+  </div>
+
+  <!-- CONTENIDO LEGAL -->
+  <div class="mx-auto max-w-4xl space-y-12 text-gray-800">
+
+    <!-- OBJETO -->
+    <section>
+      <h2 class="text-2xl font-bold text-gray-900">1. Objeto del Contrato</h2>
+      <p class="mt-3">
+        Z-LABS ofrece servicios como:
+      </p>
+      <ul class="list-disc ml-6 mt-3 space-y-1">
+        <li>Impresión 3D</li>
+        <li>Diseño y modelado digital</li>
+        <li>Fabricación de prototipos</li>
+        <li>Productos Eco-Z, Z-Flex y polímeros técnicos</li>
+        <li>Productos personalizados según las necesidades del consumidor</li>
+      </ul>
+      <p class="mt-3">
+        El PROVEEDOR se compromete a entregar los productos conforme a las características, materiales y especificaciones aprobadas por el consumidor.
+      </p>
+    </section>
+
+    <!-- INFORMACIÓN -->
+    <section>
+      <h2 class="text-2xl font-bold text-gray-900">2. Información Clara y Transparente</h2>
+      <p class="mt-3">
+        Antes de confirmar un servicio o compra, Z-LABS proporcionará:
+      </p>
+      <ul class="list-disc ml-6 mt-3 space-y-1">
+        <li>Descripción del producto</li>
+        <li>Materiales utilizados</li>
+        <li>Ficha técnica</li>
+        <li>Precio total y desglose de costos</li>
+        <li>Tiempos estimados de fabricación y entrega</li>
+        <li>Políticas de garantía</li>
+        <li>Limitaciones del servicio</li>
+      </ul>
+      <p class="mt-3">Ningún proceso inicia sin aprobación formal del consumidor.</p>
+    </section>
+
+    <!-- PROCESO DE PRODUCCIÓN -->
+    <section>
+      <h2 class="text-2xl font-bold text-gray-900">3. Proceso de Producción</h2>
+      <ul class="list-decimal ml-6 mt-3 space-y-1">
+        <li>Revisión de archivos o diseños del cliente</li>
+        <li>Preparación de materiales</li>
+        <li>Fabricación mediante impresión 3D u otros procesos</li>
+        <li>Revisión de calidad</li>
+        <li>Entrega del producto terminado</li>
+      </ul>
+      <p class="mt-3">
+        El consumidor deberá revisar y aprobar diseños, cotizaciones e imágenes previas.  
+        Z-LABS no se hace responsable por fallas derivadas de archivos incorrectos enviados por el consumidor.
+      </p>
+    </section>
+
+    <!-- PRECIOS Y PAGOS -->
+    <section>
+      <h2 class="text-2xl font-bold text-gray-900">4. Precios y Pagos</h2>
+      <p class="mt-3">El consumidor conocerá el precio total antes de iniciar la fabricación. El precio incluye:</p>
+      <ul class="list-disc ml-6 mt-3 space-y-1">
+        <li>Materiales</li>
+        <li>Mano de obra</li>
+        <li>Tiempo de máquina</li>
+        <li>Acabados</li>
+        <li>Impuestos</li>
+      </ul>
+      <p class="mt-3">No habrá cargos adicionales sin aprobación previa.</p>
+    </section>
+
+    <!-- PROVEEDORES -->
+    <section>
+      <h2 class="text-2xl font-bold text-gray-900">5. Proveedores Utilizados por Z-LABS</h2>
+      <p class="mt-3">Z-LABS trabaja con proveedores confiables para asegurar calidad:</p>
+
+      <h3 class="text-lg font-semibold mt-4">a) Proveedores de materiales</h3>
+      <ul class="list-disc ml-6 mt-1 space-y-1">
+        <li>Polibeta – impresión 3D y materiales</li>
+        <li>Fabridit – suministros de fabricación digital</li>
+      </ul>
+
+      <h3 class="text-lg font-semibold mt-4">b) Proveedores de maquinaria y herramientas</h3>
+      <ul class="list-disc ml-6 mt-1 space-y-1">
+        <li>Diractum – manufactura digital</li>
+        <li>Corporativo Makko – mecanizado y plásticos</li>
+      </ul>
+
+      <h3 class="text-lg font-semibold mt-4">c) Proveedores de servicios técnicos</h3>
+      <p class="mt-1">Servicios complementarios como cortes, mecanizado o manufactura externa.</p>
+
+      <h3 class="text-lg font-semibold mt-4">d) Proveedores de logística y transporte</h3>
+      <p class="mt-1">Para entregas seguras y confiables.</p>
+
+      <h3 class="text-lg font-semibold mt-4">Evaluación de proveedores</h3>
+      <ul class="list-disc ml-6 mt-1 space-y-1">
+        <li>Calidad del material</li>
+        <li>Cumplimiento en tiempos</li>
+        <li>Reputación</li>
+        <li>Precio justo</li>
+        <li>Garantía y soporte</li>
+      </ul>
+    </section>
+
+    <!-- TIEMPOS -->
+    <section>
+      <h2 class="text-2xl font-bold text-gray-900">6. Tiempos de Entrega</h2>
+      <p class="mt-3">
+        El cliente será informado del tiempo estimado de fabricación y entrega.  
+        Cualquier retraso será notificado oportunamente.
+      </p>
+    </section>
+
+    <!-- GARANTÍAS -->
+    <section>
+      <h2 class="text-2xl font-bold text-gray-900">7. Garantías</h2>
+      <p class="mt-3">Z-LABS garantiza productos que:</p>
+      <ul class="list-disc ml-6 mt-2 space-y-1">
+        <li>Cumplen especificaciones aprobadas</li>
+        <li>Están fabricados con materiales de calidad</li>
+        <li>Han sido revisados antes de entregarse</li>
+      </ul>
+      <p class="mt-3">En caso de defecto por fabricación, Z-LABS podrá:</p>
+      <ul class="list-disc ml-6 mt-2 space-y-1">
+        <li>Reemplazar la pieza</li>
+        <li>Repetir el trabajo</li>
+        <li>Devolver el pago</li>
+        <li>Otorgar un bono del 20%</li>
+      </ul>
+
+      <h3 class="font-semibold mt-4">La garantía no cubre:</h3>
+      <ul class="list-disc ml-6 mt-2 space-y-1">
+        <li>Errores en el diseño enviado por el consumidor</li>
+        <li>Daños por mal uso</li>
+        <li>Desgaste natural</li>
+        <li>Modificaciones posteriores</li>
+      </ul>
+    </section>
+
+    <!-- DEVOLUCIONES -->
+    <section>
+      <h2 class="text-2xl font-bold text-gray-900">8. Devoluciones y Cancelaciones</h2>
+      <p class="mt-3">
+        El consumidor puede cancelar solo antes de iniciar la fabricación.  
+        Debido a la naturaleza personalizada del producto, no se aceptan cancelaciones una vez iniciado el proceso.
+      </p>
+    </section>
+
+    <!-- PROPIEDAD -->
+    <section>
+      <h2 class="text-2xl font-bold text-gray-900">9. Propiedad Intelectual</h2>
+      <p class="mt-3">
+        Todo diseño o archivo enviado por el cliente sigue siendo de su propiedad.  
+        Z-LABS no lo utiliza para otros fines ni lo comparte sin autorización.
+      </p>
+    </section>
+
+    <!-- DATOS PERSONALES -->
+    <section>
+      <h2 class="text-2xl font-bold text-gray-900">10. Protección de Datos Personales</h2>
+      <p class="mt-3">
+        Z-LABS protege los datos personales del consumidor y los utiliza únicamente para procesar pedidos, facturación y entrega.
+      </p>
+    </section>
+
+    <!-- OBLIGACIONES -->
+    <section>
+      <h2 class="text-2xl font-bold text-gray-900">11. Obligaciones del Consumidor</h2>
+      <ul class="list-disc ml-6 mt-3 space-y-1">
+        <li>Proporcionar información correcta</li>
+        <li>Revisar y aprobar cotizaciones y diseños</li>
+        <li>Realizar pagos conforme a lo acordado</li>
+        <li>Revisar el producto al recibirlo</li>
+      </ul>
+    </section>
+
+    <!-- CONTROVERSIAS -->
+    <section>
+      <h2 class="text-2xl font-bold text-gray-900">12. Solución de Controversias</h2>
+      <p class="mt-3">
+        Cualquier duda será atendida primero directamente por Z-LABS.  
+        Si es necesario, el consumidor puede acudir a PROFECO:
+      </p>
+      <p class="mt-1 font-semibold">
+        Teléfono del Consumidor: 800 468 8722
+      </p>
+    </section>
+
+    <!-- ACEPTACIÓN -->
+    <section>
+      <h2 class="text-2xl font-bold text-gray-900">13. Aceptación del Contrato</h2>
+      <p class="mt-3">
+        El consumidor acepta estos términos al contratar un servicio o comprar un producto con Z-LABS.
+      </p>
+    </section>
+
+  </div>
+</SectionContainer>
+
+
+</Layout>

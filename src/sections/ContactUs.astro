@@ -1,0 +1,98 @@
+---
+import SectionContainer from "@Components/SectionContainer.astro";
+---
+
+<SectionContainer class="relative isolate bg-gradient-to-t from-transparent via-transparent to-orange-200/90 py-24 sm:py-32">
+
+  <!-- Fondo degradado -->
+  <div aria-hidden="true" class="absolute inset-0 -z-10 overflow-hidden">
+    <div
+      class="absolute left-1/2 top-0 -z-10 h-[45rem] w-[80rem] -translate-x-1/2 bg-gradient-to-tr from-orange-300 to-orange-500 opacity-20 blur-3xl"
+      style="clip-path: polygon(74% 44%, 100% 61%, 98% 27%, 86% 0%, 80% 2%, 72% 32%, 60% 62%, 52% 68%, 47% 58%, 44% 34%, 27% 76%, 0% 65%, 18% 100%, 27% 77%, 76% 98%)"
+    ></div>
+  </div>
+
+  <div class="mx-auto max-w-2xl text-center mb-12">
+    <h2 class="text-5xl font-Jockey font-bold text-gray-900">Contáctanos</h2>
+    <p class="mt-4 text-lg text-gray-600">
+      ¿Tienes un proyecto, una idea o necesitas una cotización? Envíanos un mensaje y nos pondremos en contacto.
+    </p>
+  </div>
+
+  <!-- Formulario -->
+  <form
+    method="POST"
+    action="#"
+    class="mx-auto max-w-3xl grid grid-cols-1 gap-y-6 bg-white p-10 rounded-3xl shadow-lg ring-1 ring-gray-200"
+  >
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+      <div>
+        <label class="block text-sm font-medium text-gray-700">Nombre</label>
+        <input
+          type="text"
+          name="name"
+          required
+          class="mt-2 w-full rounded-lg border-gray-300 shadow-sm focus:border-orange-500 focus:ring-orange-500"
+          placeholder="Tu nombre"
+        />
+      </div>
+
+      <div>
+        <label class="block text-sm font-medium text-gray-700">Correo</label>
+        <input
+          type="email"
+          name="email"
+          required
+          class="mt-2 w-full rounded-lg border-gray-300 shadow-sm focus:border-orange-500 focus:ring-orange-500"
+          placeholder="tucorreo@ejemplo.com"
+        />
+      </div>
+    </div>
+
+    <div>
+      <label class="block text-sm font-medium text-gray-700">Asunto</label>
+      <input
+        type="text"
+        name="subject"
+        required
+        class="mt-2 w-full rounded-lg border-gray-300 shadow-sm focus:border-orange-500 focus:ring-orange-500"
+        placeholder="¿Sobre qué quieres hablar?"
+      />
+    </div>
+
+    <div>
+      <label class="block text-sm font-medium text-gray-700">Mensaje</label>
+      <textarea
+        name="message"
+        rows="5"
+        required
+        class="mt-2 w-full rounded-lg border-gray-300 shadow-sm focus:border-orange-500 focus:ring-orange-500"
+        placeholder="Escribe aquí los detalles de tu consulta..."
+      ></textarea>
+    </div>
+
+    <!-- Botón -->
+    <div class="pt-4 text-center">
+      <button
+        type="submit"
+        class="rounded-xl bg-orange-500 px-8 py-3 text-white text-lg font-semibold shadow-md hover:bg-orange-400 hover:shadow-lg transition-all"
+      >
+        Enviar Mensaje
+      </button>
+    </div>
+
+  </form>
+
+  <!-- Información adicional -->
+  <div class="mx-auto max-w-3xl mt-16 text-center text-gray-700">
+    <p class="text-lg font-medium">También puedes contactarnos directamente:</p>
+    <p class="mt-2">
+      <span class="font-semibold">contacto@z-labs.mx</span>
+    </p>
+    <p class="mt-1">
+      <span class="font-semibold">+52 442 000 0000</span>
+    </p>
+  </div>
+
+</SectionContainer>

@@ -1,0 +1,104 @@
+---
+// Componente: Cubo 3D con bordes azules en vista isométrica
+// Animado con Anime.js para girar indefinidamente
+---
+
+<div class="cube-container">
+  <div class="cube-wrapper" id="cube3d">
+    <!-- Cara frontal -->
+    <div class="face front"></div>
+    <!-- Cara trasera -->
+    <div class="face back"></div>
+    <!-- Cara derecha -->
+    <div class="face right"></div>
+    <!-- Cara izquierda -->
+    <div class="face left"></div>
+    <!-- Cara superior -->
+    <div class="face top"></div>
+    <!-- Cara inferior -->
+    <div class="face bottom"></div>
+  </div>
+</div>
+
+<!-- Anime.js library -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" is:inline></script>
+
+<script is:inline>
+  if (typeof window !== 'undefined') {
+    document.addEventListener('DOMContentLoaded', () => {
+      const cube = document.getElementById('cube3d');
+
+      if (cube) {
+        // Animación de rotación indefinida sobre los tres ejes
+        anime({
+          targets: cube,
+          rotateX: 360,
+          rotateY: 360,
+          rotateZ: 0,
+          duration: 8000,
+          easing: 'linear',
+          loop: true
+        });
+      }
+    });
+  }
+</script>
+
+<style>
+  .cube-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 300px;
+    perspective: 1200px;
+  }
+
+  .cube-wrapper {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    transform-style: preserve-3d;
+    /* Vista isométrica: rotación inicial */
+    transform: rotateX(-30deg) rotateY(-45deg);
+  }
+
+  .face {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    /* Bordes azules definidos en global.css */
+    border: 3px solid #258AE4;
+    background: rgba(37, 138, 228, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #258AE4;
+    font-size: 14px;
+  }
+
+  .front {
+    transform: translateZ(100px);
+  }
+
+  .back {
+    transform: translateZ(-100px) rotateY(180deg);
+  }
+
+  .right {
+    transform: translateX(100px) rotateY(90deg);
+  }
+
+  .left {
+    transform: translateX(-100px) rotateY(-90deg);
+  }
+
+  .top {
+    transform: translateY(-100px) rotateX(90deg);
+  }
+
+  .bottom {
+    transform: translateY(100px) rotateX(-90deg);
+  }
+</style>

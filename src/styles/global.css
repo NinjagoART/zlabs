@@ -1,0 +1,48 @@
+@import url(https://fonts.cdnfonts.com/css/pp-neue-montreal);
+@import url(https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap);
+@import "tailwindcss";
+
+
+
+@theme {
+  /* Colores principales con sus variantes */
+  
+  /* Negro - Profesionalismo, solidez y seriedad */
+  --color-negro-50: #f7f8f9;
+  --color-negro-100: #eef0f2;
+  --color-negro-200: #d5d9df;
+  --color-negro-300: #bbc2cb;
+  --color-negro-400: #8995a5;
+  --color-negro-500: #343B42;  /* Color base - extrusor y texto */
+  --color-negro-600: #2f353b;
+  --color-negro-700: #272c32;
+  --color-negro-800: #1f2328;
+  --color-negro-900: #191c20;
+  
+  /* Azul - Tecnología, innovación y confianza */
+  --color-azul-50: #f2f8fe;
+  --color-azul-100: #e6f1fd;
+  --color-azul-200: #bfdcfa;
+  --color-azul-300: #99c7f7;
+  --color-azul-400: #4d9df1;
+  --color-azul-500: #258AE4;  /* Color base - cubo hexagonal */
+  --color-azul-600: #217ccd;
+  --color-azul-700: #1c67ab;
+  --color-azul-800: #165389;
+  --color-azul-900: #124470;
+  
+  /* Naranja - Energía, dinamismo y contraste */
+  --color-naranja-50: #fef8f3;
+  --color-naranja-100: #fdf1e6;
+  --color-naranja-200: #fadcc1;
+  --color-naranja-300: #f7c79c;
+  --color-naranja-400: #f19d51;
+  --color-naranja-500: #F37611;  /* Color base - letra Z */
+  --color-naranja-600: #db6a0f;
+  --color-naranja-700: #b6590d;
+  --color-naranja-800: #92470a;
+  --color-naranja-900: #773a08;
+
+  --font-neue: "PP Neue Montreal", sans-serif;
+  --font-Jockey: "Bruno Ace SC", sans-serif;
+}

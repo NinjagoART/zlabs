@@ -1,0 +1,138 @@
+---
+import SectionContainer from "@Components/SectionContainer.astro";
+
+const printers = [
+  {
+    name: "Creality Ender 3 V3 KE",
+    image: "/printers/ender3-placeholder.webp",
+    description:
+      "Impresora FDM confiable y económica. Ideal para producción base, mantenimiento sencillo y compatibilidad con la mayoría de materiales.",
+  },
+  {
+    name: "Anycubic Kobra 2",
+    image: "/printers/kobra2-placeholder.webp",
+    description:
+      "Máquina FDM de gran estabilidad y precisión. Adecuada para producción repetitiva de piezas medianas con baja tasa de fallos.",
+  },
+  {
+    name: "Bambu Lab P1S",
+    image: "/printers/p1s-placeholder.webp",
+    description:
+      "Equipo profesional FDM de alta velocidad (300 mm/s+). Sensores automáticos y rendimiento ideal para producción continua.",
+  },
+  {
+    name: "Phrozen Sonic Mini 8K",
+    image: "/printers/phrozen8k-placeholder.webp",
+    description:
+      "Impresora SLA de ultra alta resolución (22 µm). Perfecta para miniaturas, joyería y piezas de detalle fino.",
+  },
+];
+
+const start = 1;
+const end = 13;
+
+// genera /samples/1.jpg ... /samples/13.jpg
+const allSamples = Array.from({ length: end - start + 1 }, (_, i) => `/samples/${start + i}.jpg`);
+---
+
+<section class="relative isolate bg-white px-6 py-24 sm:py-32 lg:px-8 overflow-hidden" id="printers">
+  <!-- Degradado naranja -->
+  <div aria-hidden="true" class="absolute inset-x-0 -top-3 -z-10 transform-gpu overflow-hidden px-36 blur-3xl">
+    <div
+      style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"
+      class="mx-auto aspect-[1155/678] w-[288.75rem] bg-gradient-to-tr from-orange-400 to-orange-600 opacity-20"
+    ></div>
+  </div>
+
+  <!-- TITULO -->
+  <div class="mx-auto max-w-4xl text-center">
+    <h2 class="text-base font-semibold text-orange-400">Maquinaria</h2>
+    <p class="mt-2 text-5xl font-semibold tracking-tight text-gray-900 sm:text-6xl font-Jockey">
+      Nuestras Impresoras y Equipos de Producción
+    </p>
+  </div>
+
+  <p class="mx-auto mt-6 max-w-2xl text-center text-lg font-medium text-gray-700">
+    Conoce la tecnología que utilizamos en Z-LABS para fabricar piezas, prototipos y filamento reciclado.
+  </p>
+
+  <!-- CARDS -->
+  <div class="mx-auto mt-20 grid max-w-6xl grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 justify-items-center">
+
+    {printers.map((printer) => (
+      <div class="w-full max-w-sm rounded-3xl bg-gray-50 ring-1 ring-gray-200 p-6 hover:shadow-lg transition-all">
+        
+        <!-- Imagen principal -->
+        <img
+          src={printer.image}
+          alt={printer.name}
+          class="w-full rounded-xl mb-4 object-cover h-72 bg-gray-100"
+        />
+
+        <!-- Nombre y descripción -->
+        <h3 class="text-2xl font-semibold text-gray-900 text-center">{printer.name}</h3>
+        <p class="text-gray-700 mt-2 text-base leading-relaxed text-center">{printer.description}</p>
+
+      </div>
+    ))}
+
+  </div>
+
+  <!-- CARRUSEL SIMPLES (OPCIÓN A) -->
+<!-- CARRUSEL SIMPLES (OPCIÓN A) CON AUTOSCROLL -->
+<div class="mx-auto mt-16 max-w-6xl">
+
+  <h3 class="text-xl font-semibold text-gray-900 mb-4 text-center">Muestras de Impresión</h3>
+
+  <!-- Contenedor visible -->
+  <div
+    id="autoCarousel"
+    class="flex gap-6 overflow-x-auto pb-4 snap-x snap-mandatory scroll-smooth whitespace-nowrap"
+  >
+    {allSamples.map((sample) => (
+      <div class="min-w-[80%] md:min-w-[40%] lg:min-w-[30%] snap-center inline-block">
+        <img
+          src={sample}
+          alt="Sample print"
+          class="w-full h-64 object-cover rounded-xl shadow-md"
+        />
+      </div>
+    ))}
+  </div>
+
+</div>
+
+  <script>
+    const container = document.getElementById("autoCarousel");
+
+    let autoScroll;
+    let speed = 3000; // cada 3 segundos
+    let step = 300; // desplazamiento por animación
+
+    function startAutoScroll() {
+      autoScroll = setInterval(() => {
+        container.scrollBy({ left: step, behavior: "smooth" });
+
+        // Si llegó al final, regresa al inicio
+        if (container.scrollLeft + container.clientWidth >= container.scrollWidth - 5) {
+          setTimeout(() => {
+            container.scrollTo({ left: 0, behavior: "smooth" });
+          }, 800);
+        }
+      }, speed);
+    }
+
+    function stopAutoScroll() {
+      clearInterval(autoScroll);
+    }
+
+    // Inicio automático
+    startAutoScroll();
+
+    // Pausa al pasar el mouse (UX PRO)
+    container.addEventListener("mouseenter", stopAutoScroll);
+    container.addEventListener("mouseleave", startAutoScroll);
+  </script>
+
+</section>
+
